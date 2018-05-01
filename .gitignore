@@ -1,9 +1,9 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/Assets/AssetStoreTools*
+/CityGML2GameObject/[Ll]ibrary/
+/CityGML2GameObject/[Tt]emp/
+/CityGML2GameObject/[Oo]bj/
+/CityGML2GameObject/[Bb]uild/
+/CityGML2GameObject/[Bb]uilds/
+/CityGML2GameObject/Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
 /.vs/
@@ -33,5 +33,3 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# TJ
-Library/ShaderCache

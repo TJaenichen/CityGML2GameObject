@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1982550847640258}
+  m_IsPrefabParent: 1
+--- !u!1 &1982550847640258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4049180709963730}
+  - component: {fileID: 114105292574462538}
+  - component: {fileID: 114988692202131424}
+  m_Layer: 0
+  m_Name: CGML2GO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4049180709963730
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982550847640258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114105292574462538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982550847640258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bda7e376923d5c42ad0e87b60f8418d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Filename: Berlin
+  StreamingAssets: 1
+  DefaultMaterial: {fileID: 2100000, guid: f02f6a1773427f8458138a0aa40135ec, type: 2}
+  Parent: {fileID: 1982550847640258}
+  ApplyTranslation: 1
+  ActualTranslate: {x: 0, y: 0, z: 0}
+  Translate: {x: 0, y: 0, z: 0}
+  ShowDebug: 0
+  UpdateRate: 16
+  ShowCurves: 1
+  Semantics: 1
+  CurveThickness: 1
+  LineRendererPrefab: {fileID: 1170907793510940, guid: 5d96426d3f7765a4490f67ab501ee872,
+    type: 2}
+  GenerateColliders: 1
+  SemanticSurfaces:
+  - GroundSurface
+  - WallSurface
+  - RoofSurface
+  - ClosureSurface
+  - CeilingSurface
+  - InteriorWallSurface
+  - FloorSurface
+  - OuterCeilingSurface
+  - OuterFloorSurface
+  - Door
+  - Window
+  Polygons: []
+  Textures: []
+  SemanticSurfMat: {fileID: 0}
+--- !u!114 &114988692202131424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982550847640258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9387aae81c64284d9c0f1e646a489d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Materials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
