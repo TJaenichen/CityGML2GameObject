@@ -12,4 +12,5 @@ Todo:
 - Documentation
 - Bugfixing (Unproccessed surfaces are added under the root of the scene)
 - Textures
+- Refactoring, SoC
 - ...
