@@ -1,7 +1,9 @@
 # CityGML2GameObject
 A tool to import CityGML as GameObjects at runtime
 
-This is abandoned for now but can function as a starting point for a proper implementation.
+This can function as a starting point for a proper implementation.
+
+If you need help implementing it or developing a solution based on Unity/CityGML feel free to contact me at tjaenichen gmail.com
 
 Implemented:
 
