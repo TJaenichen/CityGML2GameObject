@@ -30,6 +30,16 @@ namespace Assets.Scripts.CityGML2GO.GmlHandlers
 
             while (reader.Read())
             {
+				if (reader.NodeType == XmlNodeType.Element && reader.LocalName == "X3DMaterial")
+				{
+					MaterialHandler.HandleMaterial(reader, cityGml2Go);
+				}
+
+				if (reader.NodeType == XmlNodeType.Element && reader.LocalName == "ParameterizedTexture")
+				{
+					TextureHandler.HandleTexture(reader, cityGml2Go);
+				}
+
                 if (reader.NodeType == XmlNodeType.Element && reader.LocalName == "Polygon")
                 {
                     var polyGo = PolygonHandler.PolyToMesh(reader, buildingName, cityGml2Go, semanticType);

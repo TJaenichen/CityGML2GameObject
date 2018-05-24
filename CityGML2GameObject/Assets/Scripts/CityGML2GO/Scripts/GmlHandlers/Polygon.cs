@@ -98,16 +98,16 @@ namespace Assets.Scripts.CityGML2GO.GmlHandlers
                 }
             }
 
-            var lastPoint = extPositions.Last();
+            //var lastPoint = extPositions.Last();
             //extPositions = extPositions.Distinct().ToList();
-            extPositions.Add(lastPoint);
+            //extPositions.Add(lastPoint);
 
-            for (var index = 0; index < intPositions.Count; index++)
-            {
-                lastPoint = intPositions[index].Last();
-                //intPositions[index] = intPositions[index].Distinct().ToList();
-                intPositions[index].Add(lastPoint);
-            }
+//            for (var index = 0; index < intPositions.Count; index++)
+//            {
+//                lastPoint = intPositions[index].Last();
+//                //intPositions[index] = intPositions[index].Distinct().ToList();
+//                intPositions[index].Add(lastPoint);
+//            }
 
 
             if (!PolygonHandler.IsPolyValid(extPositions))
@@ -131,12 +131,15 @@ namespace Assets.Scripts.CityGML2GO.GmlHandlers
 
             var polygon = new Poly2Mesh.Polygon();
 
+			polygon.oriExt = extPositions.ConvertAll(ext => new Vector3(ext.x,ext.y, ext.z));
             extPositions.Reverse();
             intPositions.Reverse();
 
             polygon.outside = extPositions;
             polygon.holes = intPositions;
 
+            polygon.name = polyName;
+            cityGml2Go.oriPoly.Add(polygon);
             GameObject go = null;
 
             try

@@ -26,6 +26,8 @@ namespace Assets.Scripts.CityGML2GO
 
         // Polygon: defines the input to the triangulation algorithm.
         public class Polygon {
+			public string name;
+			public List<Vector3> oriExt;
             // outside: a set of points defining the outside of the polygon
             public List<Vector3> outside;
 
@@ -97,9 +99,17 @@ namespace Assets.Scripts.CityGML2GO
             public Vector2 ClosestUV(Vector3 pos) {
                 Vector2 bestUV = outsideUVs[0];
                 float bestDSqr = (outside[0] - pos).sqrMagnitude;
-                for (int i=1; i<outsideUVs.Count; i++) {
+                for (int i = 0; i < oriExt.Count; i++)
+                    for (int t = i + 1; t < oriExt.Count; t++)
+                        if (oriExt[i] == oriExt[t])
+                            oriExt[t] = new Vector3(0, 0, 0);
+                for (int i = 1; i < outsideUVs.Count; i++)
+                {
                     float dsqr = (outside[i] - pos).sqrMagnitude;
-                    if (dsqr < bestDSqr) {
+                    if (dsqr == 0)
+                        return bestUV;
+                    if (dsqr < bestDSqr)
+                    {
                         bestDSqr = dsqr;
                         bestUV = outsideUVs[i];
                     }
