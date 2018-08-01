@@ -36,9 +36,10 @@ namespace Assets.Scripts.CityGML2GO
         public bool GenerateColliders;
         public List<string> SemanticSurfaces = new List<string>{ "GroundSurface", "WallSurface", "RoofSurface", "ClosureSurface", "CeilingSurface", "InteriorWallSurface", "FloorSurface", "OuterCeilingSurface", "OuterFloorSurface", "Door", "Window" };
         
+		public List<Poly2Mesh.Polygon> oriPoly = new List <Poly2Mesh.Polygon> (); 
         public List<GameObject> Polygons = new List<GameObject>();
         public Dictionary<string, List<string>> Materials = new Dictionary<string, List<string>>();
-        public List<UnityEngine.Texture> Textures = new List<UnityEngine.Texture>();
+		public List<TextureInformation> Textures = new List<TextureInformation>();
         [HideInInspector]
         public SemanticSurfaceMaterial SemanticSurfMat;
 
@@ -136,7 +137,7 @@ namespace Assets.Scripts.CityGML2GO
             {
                 Polygons = new List<GameObject>();
                 Materials = new Dictionary<string, List<string>>();
-                Textures = new List<UnityEngine.Texture>();
+                Textures = new List<TextureInformation>();
                 yield return Run(Path.Combine(directoryName, gml));
             }
         }
@@ -203,23 +204,13 @@ namespace Assets.Scripts.CityGML2GO
                                     yield return null;
                                 }
                                 BuildingHandler.HandleBuilding(reader, this);
-                            }
-
-                            if (reader.NodeType == XmlNodeType.Element && reader.LocalName == "X3DMaterial")
-                            {
-                                //HandleMaterial(reader);
-                            }
-
-                            if (reader.NodeType == XmlNodeType.Element && reader.LocalName == "ParameterizedTexture")
-                            {
-                                //HandleTexture(reader);
-                            }
+                            }                     
                         }
                     }
                 }
             }
             //CombineMeshes();
-            //ApplyMaterials();
+			MaterialHandler.ApplyMaterials(this);
 
             yield return null;
         }
