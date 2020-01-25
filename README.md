@@ -1,5 +1,5 @@
 # CityGML2GameObject
-A tool to import CityGML as GameObjects at runtime
+A tool to import CityGML as GameObjects at runtime.
 
 This can function as a starting point for a proper implementation.
 
@@ -18,3 +18,5 @@ Todo:
 - Textures
 - Refactoring, SoC
 - ...
+
+ If you need any guidance or help to implement this further please feel free to contact me at tjaenichen@gmail.com
