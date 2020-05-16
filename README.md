@@ -3,7 +3,7 @@ A tool to import CityGML as GameObjects at runtime.
 
 This can function as a starting point for a proper implementation.
 
-If you need help implementing it or developing a solution based on Unity/CityGML feel free to contact me at tjaenichen gmail.com
+If you need help implementing it or developing a solution based on Unity/CityGML feel free to contact me at tjaenichen@gmail.com
 
 Implemented:
 
@@ -19,4 +19,4 @@ Todo:
 - Refactoring, SoC
 - ...
 
- If you need any guidance or help to implement this further please feel free to contact me at tjaenichen@gmail.com
+ 
